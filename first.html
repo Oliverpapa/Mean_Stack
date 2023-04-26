@@ -1,0 +1,162 @@
+<!-- 
+    Tags must be nested properly.
+    Don’t use any inline style sheet.
+    Webpage must be responsible and adjustable with all screen size devices.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        input:focus {
+            border-color: #83b4e6;
+            box-shadow: 0 0 4px #83b4e6;
+            outline: none;
+        }
+
+        .half-input-col {
+            width: 47%;
+        }
+
+        .input-checkbox:focus{
+            /* no focus effect */
+            outline: none;
+            border-color:none;
+            box-shadow: none;
+
+        }
+
+        .checkbox-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .agree {
+            display: flex;
+            flex-direction: left;
+            justify-content: flex-start;
+            align-items: center;
+            white-space: nowrap;
+            font-size: 10px;
+            width: 25%;
+            margin-left: -2rem;
+            /* margin-right: 0.5rem; */
+        }
+
+        .agree input {
+            width: 25%;
+        }
+
+        .checkbox-text {
+            flex-direction: right;
+            text-align: left;
+            font-size: 10px;
+            width: 70%;
+        }
+
+        .checkbox-text a {
+            color: #448ccb;
+            text-decoration: none;
+        }
+
+        .checkbox-text span {
+            background-color: #428bca;
+            color: white;
+            border-radius: 3px;
+            padding: 0.1rem 0.3rem;
+        }
+
+        button {
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 0.5rem 1rem;
+            color: white;
+            width: 47%;
+        }
+
+        .register-btn {
+            background-color: #428bca;
+        }
+
+        .signin-btn {
+            background-color: #5cb85c;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Sign Up</h2>
+        <div class="input-row ">
+            <input class="half-input-col" type="text" name="FirstName" placeholder="First Name">
+            <input class="half-input-col" type="text" name="LastName" placeholder="Last Name">
+        </div>
+        <div class="input-row">
+            <input type="text" placeholder="Mobile No.">
+        </div>
+        <div class="input-row">
+            <input type="text" placeholder="Email Address">
+        </div>
+
+        <div class="input-row">
+            <input class="half-input-col" type="password" placeholder="Password">
+            <input class="half-input-col" type="password" placeholder="Password Confirmation">
+        </div>
+        <div class="checkbox-row">
+            <div class="agree">
+                <input class="input-checkbox" type="checkbox">
+                <span><b>I Agree</b></span>
+            </div>
+            <div class="checkbox-text">
+                <p>By clicking <span>Register</span>, you agree to the <a>Terms and Conditions</a> set out by
+                    this site,including our Cookie Use.</p>
+            </div>
+        </div>
+        <div class="input-row">
+            <button class="register-btn">Register</button>
+            <button class="signin-btn">Sign in</button>
+        </div>
+    </form>
+</body>
+</html>
